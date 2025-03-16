@@ -81,7 +81,7 @@ div.standard-menu{
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
 }
 .menu__btn > span,
 .menu__btn > span::before,
@@ -110,7 +110,7 @@ div.standard-menu{
     position: fixed;
     top: 0;
     left: -100%;
-    width: 300px;
+    width: 200px;
     height: 100%;
     margin: 0;
     padding: 80px 0;
