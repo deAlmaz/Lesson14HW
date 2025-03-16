@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GREENSHOP - Home</title>
+<!--    <link rel="stylesheet" href="./css/reset.css">-->
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/index.css"/>
+<!--    <link rel="stylesheet" media='screen and (min-width: 1200px)' href="./styles/index.css"/>-->
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <script>
+        window.addEventListener('load', function(){
+            const loader = document.querySelector('.loader-container');
+            const main = document.querySelector('main');
+            setTimeout(() => {
+                document.querySelector('body').classList.remove('display-none');
+                loader.style.display = 'none';
+                main.style.display = 'block';
+            }, 15)
+        })
+    </script>
+    <main class="display-none margin20">
+        <div id="menu">
+            <div class="main-wrapper">
+                <header>
+                    <nav>
+                        <div class="header-wrapper">
+                            <div class="header-wrapper-nav wrapper-just-left">
+                                <button onclick="location.href ='./index.html'" class="button-home">
+                                    <svg width="150" height="35"><use href="./sprite.svg#logo"/></svg>
+                                </button>
+                            </div>
+                            <div class="standard-menu header-wrapper-nav wrapper-just-center">
+                                <ul class="list-main-menu">
+                                    <li class="sel">
+                                        <a href="#section1">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="#section2">Shop</a>
+                                    </li>
+                                    <li>
+                                        <a href="#section3">Plant&nbsp;Care</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Drainage</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Fungicides</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Fertilizer</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Priming<div class="dropdown-marker">
+                                                    <svg class="vertical-align-middle" width="16" height="16">
+                                                        <use href="./sprite.svg#dropdownmenu-arrow-down"/></svg>
+                                                </div></a>
+                                                <ul>
+                                                    <li><a href="#">Universal</a></li>
+                                                    <li><a href="#">For Ficus</a></li>
+                                                    <li><a href="#">For Cacti</a></li>
+                                                    <li><a href="#">For Citrus</a></li>
+                                                    <li><a href="#">For those in bloom</a></li>
+                                                    <li><a href="#">For Orchids</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#section4">Blogs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="hamburger-menu header-wrapper-nav wrapper-just-center">
+                                <input id="menu__toggle" type="checkbox" />
+                                <label class="menu__btn" for="menu__toggle">
+                                    <span></span>
+                                </label>
+
+                                <ul class="menu__box">
+                                    <li><a class="menu__item" href="#">Home</a></li>
+                                    <li><a class="menu__item" href="#">Shop</a></li>
+                                    <li><a class="menu__item" href="#">Plant Care</a>
+                                        <ul>
+                                            <li><a class="menu__item sub__item" href="#">Universal</a></li>
+                                            <li><a class="menu__item sub__item" href="#">For Ficus</a></li>
+                                            <li><a class="menu__item sub__item" href="#">For Cacti</a></li>
+                                            <li><a class="menu__item sub__item" href="#">For Citrus</a></li>
+                                            <li><a class="menu__item sub__item" href="#">For those in bloom</a></li>
+                                            <li><a class="menu__item sub__item" href="#">For Orchids</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="menu__item" href="#">Blogs</a></li>
+                                </ul>
+                            </div>
+                            <div class="header-wrapper-nav wrapper-just-right">
+                                <button onclick="location.href ='./pages/register.html'" class="button-login wrapper-just-left">
+                                    <svg class="" width="20" height="20"><use href="./sprite.svg#login"/></svg>Login</button>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="main-wrapper">
+                <div class="banner-wrapper">
+                    <div class="banner-container overlay">
+                        <div>
+                            <h2 class="text">WELCOME TO GREENSHOP</h2>
+                        </div>
+                        <div>
+                            <h1 class="text">LET'S MAKE A<br>BETTER <span class="text-color-gs">PLANET</span></h1>
+                        </div>
+                        <div>
+                            <h3 class="text">We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!</h3>
+                        </div>
+                        <div>
+                            <button onclick="location.href ='https://www.instagram.com/life.contours/'" class="button-shopnow">SHOP&nbsp;NOW</button>
+                        </div>
+                    </div>
+                    <div class="banner-container underlay">
+                        <div class="">
+                            <img class="plantImgLarge" src="./img/plant-04.png" alt="">
+                        </div>
+                        <div class="">
+                            <img class="plantImgSmall" src="./img/plant-04.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="categories">
+            <div class="main-wrapper">
+                <div class="categories-wrapper marginT25">
+                    <div class="categories-menu-bg">
+                        <div class="categories-menu-bg-list">
+                            <span class="categories-header">Categories</span>
+                            <ul class="categories-menu">
+                                <li class="sel">House Plants</li>
+                                <li>Potter Plants</li>
+                                <li>Seeds</li>
+                                <li>Small Plants</li>
+                                <li>Big Plants</li>
+                                <li>Succulents</li>
+                                <li>Terrariums</li>
+                                <li>Gardening</li>
+                                <li>Accessories</li>
+                            </ul>
+                        </div>
+                        <img class="bannerCategories" width="100%" src="./img/banner-categories.png" alt="">
+                    </div>
+                    <div class="all-plants-bg">
+                        <nav>
+                            <div class="all-plants-nav-container">
+                                <div class="all-plants-wrapper-nav">
+                                    <div class="all-plants-menu sel">All&nbsp;Plants</div>
+                                    <div class="all-plants-menu">New&nbsp;Arrivals</div>
+                                    <div class="all-plants-menu">Sale</div>
+                                </div>
+                                <div class="all-plants-wrapper-nav wrapper-just-right">
+                                    <div class="all-plants-menu sort">Sort&nbsp;by:&nbsp;Default&nbsp;sorting&nbsp;&nbsp;<svg class="vertical-align-middle" width="16" height="16">
+                                                                                            <use href="./sprite.svg#dropdownmenu-arrow-down"/></svg></div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="all-plants-container marginT31">
+                            <div class="plant-item-container">
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" height="250" src="./img/plant-01.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">Barberton Daisy</span><br>
+                                    <span class="plant-text-style price">$119.00</span>
+                                </div>
+                            </div>
+                            <div class="plant-item-container">
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" height="250" src="./img/plant-02.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">Angel Wing Begonia</span><br>
+                                    <span class="plant-text-style price">$169.00</span>
+                                </div>
+                            </div>
+                            <div class="plant-item-container">
+                                <div class="plant-item-ribbon-sale">13% OFF</div>
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" height="250" src="./img/plant-03.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">African Violet</span><br>
+                                    <span class="plant-text-style price">$199.00</span>
+                                    <span class="plant-text-style price-discount">$229.00</span>
+                                </div>
+                            </div>
+
+                            <div class="plant-item-container">
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" width="250" src="./img/plant-04.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">Beach Spider Lily</span><br>
+                                    <span class="plant-text-style price">$129.00</span>
+                                </div>
+                            </div>
+                            <div class="plant-item-container">
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" height="250" src="./img/plant-05.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">Blushing Bromeliad</span><br>
+                                    <span class="plant-text-style price">$139.00</span>
+                                </div>
+                            </div>
+                            <div class="plant-item-container">
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" height="250" src="./img/plant-06.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">Aluminum Plant</span><br>
+                                    <span class="plant-text-style price">$179.00</span>
+                                </div>
+                            </div>
+
+                            <div class="plant-item-container">
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" height="250" src="./img/plant-07.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">Bird's Nest Fern</span><br>
+                                    <span class="plant-text-style price">$99.00</span>
+                                </div>
+                            </div>
+                            <div class="plant-item-container">
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" height="250" src="./img/plant-08.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">Broadleaf Lady Palm</span><br>
+                                    <span class="plant-text-style price">$59.00</span>
+                                </div>
+                            </div>
+                            <div class="plant-item-container">
+                                <div class="plant-item-icons">
+                                    <div class="plant-item-icons-stripe"></div>
+                                    <div class="plant-item-icons-wrapper">
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-cart"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-fav"/></svg></div>
+                                        <div class="plant-item-icons-item"><svg class="" width="20" height="20"><use href="./sprite.svg#hover-zoom"/></svg></div>
+                                    </div>
+                                </div>
+                                <div class="plant-image-container">
+                                    <img class="" height="250" src="./img/plant-09.png" alt="">
+                                </div>
+                                <div class="plant-text-container">
+                                    <span class="plant-text-style">Chinese Evergreen</span><br>
+                                    <span class="plant-text-style price">$39.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div id="pages">
+            <div class="categories-footer marginT94 marginB50 main-wrapper wrapper-just-right">
+                <nav>
+                    <div class="display-flex wrapper-just-right">
+                        <div class="categories-footer-page sel">1</div>
+                        <div class="categories-footer-page">2</div>
+                        <div class="categories-footer-page">3</div>
+                        <div class="categories-footer-page">4</div>
+                        <div class="categories-footer-page">
+                            <svg class="vertical-align-middle button-next-page" width="16" height="16">
+                                <use href="./sprite.svg#dropdownmenu-arrow-down"/></svg>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div id="info">
+            <div class="info-wrapper">
+                <div class="info-item-container">
+                    <div class="info-white-header"></div>
+                    <div class="info-image-container">
+                        <img class="info-image-container img" src="./img/plant-05.png" alt="">
+                    </div>
+                    <div class="info-text-wrapper">
+                        <div class="info-text-container">
+                            <span class="info-text-style">Summer cactus & succulents</span>
+                        </div>
+                        <div class="info-text-container desc">
+                            <span class="info-text-style desc">We are an online plant shop offering a wide range of cheap and trendy plants</span>
+                        </div>
+                        <div>
+                            <button onclick="location.href ='https://www.instagram.com/life.contours/'" class="button-findmore">
+                                Find&nbsp;More&nbsp;<svg class="vertical-align-middle" width="18" height="18"><use href="./sprite.svg#arrow-right-white"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-item-container">
+                    <div class="info-white-header"></div>
+                    <div class="info-image-container">
+                        <img class="info-image-container img" src="./img/plant-03.png" alt="">
+                    </div>
+                    <div class="info-text-wrapper">
+                        <div class="info-text-container">
+                            <span class="info-text-style">Styling Trends & much more</span>
+                        </div>
+                        <div class="info-text-container desc">
+                            <span class="info-text-style desc">We are an online plant shop offering a wide range of cheap and trendy plants</span>
+                        </div>
+                        <div>
+                            <button onclick="location.href ='https://www.instagram.com/life.contours/'" class="button-findmore">
+                                Find&nbsp;More&nbsp;<svg class="vertical-align-middle" width="18" height="18"><use href="./sprite.svg#arrow-right-white"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="blogs">
+            <div class="blog-wrapper header">
+                <div class="blog-header-style">
+                    <span>Our Blog Posts</span>
+                </div>
+                <div class="blog-desc-style">
+                    <span>We are an online plant shop offering a wide range of cheap and trendy plants.</span>
+                </div>
+            </div>
+            <div class="blog-wrapper">
+                <div class="blog-item-container">
+                    <div class="blog-image-container">
+                        <img src="./img/blog-01.png" alt="">
+                    </div>
+                    <div class="blog-text-wrapper">
+                        <div class="blog-text-container">
+                            <span class="blog-text-style date">September 12 | Read in 6 minutes</span>
+                        </div>
+                        <div class="blog-text-container marginT2">
+                            <span class="blog-text-style name">Cactus & Succulent Care Tips</span>
+                        </div>
+                        <div class="blog-text-container marginT4">
+                            <span class="blog-text-style desc">Cacti are succulents are easy care plants for any home or patio.</span>
+                        </div>
+                        <div>
+                            <button onclick="location.href ='https://www.instagram.com/life.contours/'" class="button-readmore-text">
+                                Read&nbsp;More&nbsp;<svg class="vertical-align-middle" width="16" height="16"><use href="./sprite.svg#arrow-right-grey"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item-container">
+                    <div class="blog-image-container">
+                        <img src="./img/blog-02.png" alt="">
+                    </div>
+                    <div class="blog-text-wrapper">
+                        <div class="blog-text-container">
+                            <span class="blog-text-style date">September 15 | Read in 2 minutes</span>
+                        </div>
+                        <div class="blog-text-container marginT2">
+                            <span class="blog-text-style name">Top 10 Succulents for Your Home</span>
+                        </div>
+                        <div class="blog-text-container marginT4">
+                            <span class="blog-text-style desc">Best in hanging baskets. Prefers medium to high light.</span>
+                        </div>
+                        <div>
+                            <button onclick="location.href ='https://www.instagram.com/life.contours/'" class="button-readmore-text">
+                                Read&nbsp;More&nbsp;<svg class="vertical-align-middle" width="16" height="16"><use href="./sprite.svg#arrow-right-grey"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item-container">
+                    <div class="blog-image-container">
+                        <img src="./img/blog-03.png" alt="">
+                    </div>
+                    <div class="blog-text-wrapper">
+                        <div class="blog-text-container marginT2">
+                            <span class="blog-text-style date">September 13 | Read in 3 minutes</span>
+                        </div>
+                        <div class="blog-text-container marginT4">
+                            <span class="blog-text-style name">Cacti & Succulent<br>Care Tips</span>
+                        </div>
+                        <div class="blog-text-container">
+                            <span class="blog-text-style desc">Cacti and succulents thrive in containers and because most are.</span>
+                        </div>
+                        <div>
+                            <button onclick="location.href ='https://www.instagram.com/life.contours/'" class="button-readmore-text">
+                                Read&nbsp;More&nbsp;<svg class="vertical-align-middle" width="16" height="16"><use href="./sprite.svg#arrow-right-grey"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item-container">
+                    <div class="blog-image-container">
+                        <img src="./img/blog-04.png" alt="">
+                    </div>
+                    <div class="blog-text-wrapper">
+                        <div class="blog-text-container">
+                            <span class="blog-text-style date">September 15 I Read in 2 minutes</span>
+                        </div>
+                        <div class="blog-text-container">
+                            <span class="blog-text-style name">Best Houseplants Room by Room</span>
+                        </div>
+                        <div class="blog-text-container">
+                            <span class="blog-text-style desc">The benefits of houseplants are endless. In addition to.</span>
+                        </div>
+                        <div>
+                            <button onclick="location.href ='https://www.instagram.com/life.contours/'" class="button-readmore-text">
+                                Read&nbsp;More&nbsp;<svg class="vertical-align-middle" width="16" height="16"><use href="./sprite.svg#arrow-right-grey"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="newsletters">
+            <div class="newsletter-container">
+                <div class="newsletter-wrapper">
+                    <div class="newsletter-item-wrapper">
+                        <div class="newsletter-item">
+                            <div class="newsletter-item-img gardencare">
+                                <svg width="75" height="92"><use href="./sprite.svg#news-gardencare"/></svg></div>
+                            <div class="newsletter-item-txt header"><span>Garden Care</span></div>
+                            <div class="newsletter-item-txt desc"><span>We are an online plant shop offering a wide range of cheap and trendy plants.</span></div>
+                        </div>
+                        <div class="newsletter-item separator"></div>
+                        <div class="newsletter-item">
+                            <div class="newsletter-item-img plantrev">
+                                <svg width="82" height="92"><use href="./sprite.svg#news-plantrev"/></svg></div>
+                            <div class="newsletter-item-txt header"><span>Plant Renovation</span></div>
+                            <div class="newsletter-item-txt desc"><span>We are an online plant shop offering a wide range of cheap and trendy plants.</span></div>
+                        </div>
+                        <div class="newsletter-item separator"></div>
+                        <div class="newsletter-item">
+                            <div class="newsletter-item-img watergard">
+                                <svg width="89" height="92"><use href="./sprite.svg#news-watergard"/></svg></div>
+                            <div class="newsletter-item-txt header"><span>Watering Garden</span></div>
+                            <div class="newsletter-item-txt desc"><span>We are an online plant shop offering a wide range of cheap and trendy plants.</span></div>
+                        </div>
+                    </div>
+                    <div class="newsletter-convo-container">
+                        <div class="newsletter-convo-wrapper">
+                            <div class="newsletter-convo-txt header"><span>Would you like to join newsletters?</span></div>
+                            <form id="convo" action="#">
+                                <div class="newsletter-convo-form">
+                                    <input type="email" name="email" placeholder="enter your e-mail address..." pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                                    <button>Join</button>
+                                </div>
+                            </form>
+                            <div class="newsletter-convo-txt desc"><span>We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contacts">
+            <div class="contacts-container">
+                <div class="contacts-wrapper">
+                    <div class="contacts-item-logo">
+                        <div><svg width="150" height="35"><use href="./sprite.svg#logo"/></svg></div>
+                    </div>
+                    <div class="contacts-item">
+                        <a target=blank href="https://maps.app.goo.gl/v6igWGgyJUJ6Mgum8">
+                            <div><svg class="" width="20" height="20"><use href="./sprite.svg#icon-location"/></svg></div>
+                            <div><span>70 West Buckingham Ave.<br>Farmingdale, NY 11735</span></div></a>
+                    </div>
+                    <div class="contacts-item">
+                        <a target=blank href="mailto:contact@greenshop.com">
+                            <div><svg class="" width="20" height="20"><use href="./sprite.svg#icon-email"/></svg></div>
+                            <div><span>contact@greenshop.com</span></div></a>
+                    </div>
+                    <div class="contacts-item">
+                        <a target=blank href="tel:+380737161131">
+                            <div><svg class="" width="20" height="20"><use href="./sprite.svg#icon-phone"/></svg></div>
+                            <div><span>+88 01911 717 490</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer-container">
+                <div class="footer-wrapper">
+                    <div class="footer-item-wrapper">
+                        <div class="footer-item">
+                            <div class="footer-item-txt header"><span>My Account</span></div>
+                            <button class="footer-item-txt descBtn">My Account</button>
+                            <button class="footer-item-txt descBtn">Our stores</button>
+                            <button class="footer-item-txt descBtn">Contact us</button>
+                            <button class="footer-item-txt descBtn">Career</button>
+                            <button class="footer-item-txt descBtn">Specials</button>
+                        </div>
+                        <div class="footer-item separator"></div>
+                        <div class="footer-item">
+                            <div class="footer-item-txt header"><span>Help & Guide</span></div>
+                            <button class="footer-item-txt descBtn">Help Center</button>
+                            <button class="footer-item-txt descBtn">How to Buy</button>
+                            <button class="footer-item-txt descBtn">Shipping % Delivery</button>
+                            <button class="footer-item-txt descBtn">Product Policy</button>
+                            <button class="footer-item-txt descBtn">How to Return</button>
+                        </div>
+                        <div class="footer-item separator"></div>
+                        <div class="footer-item">
+                            <div class="footer-item-txt header"><span>Categories</span></div>
+                            <button class="footer-item-txt descBtn">House Plants</button>
+                            <button class="footer-item-txt descBtn">Potter Plants</button>
+                            <button class="footer-item-txt descBtn">Seeds</button>
+                            <button class="footer-item-txt descBtn">Small Plants</button>
+                            <button class="footer-item-txt descBtn">Accessories</button>
+                        </div>
+                    </div>
+                    <div class="footer-socpay-container">
+                        <div class="footer-socpay-wrapper">
+                            <div class="footer-item-txt header"><span>Social Media</span></div>
+                            <div class="footer-social-wrapper">
+                                <a target=blank href="https://www.facebook.com/">
+                                    <svg class="" width="30" height="30"><use href="./sprite.svg#icon-soc-facebook"/></svg></a>
+                                <a target=blank href="https://www.instagram.com/">
+                                    <svg class="" width="30" height="30"><use href="./sprite.svg#icon-soc-instagram"/></svg></a>
+                                <a target=blank href="https://www.twitter.com/">
+                                    <svg class="" width="30" height="30"><use href="./sprite.svg#icon-soc-twitter"/></svg></a>
+                                <a target=blank href="https://www.linkedin.com/">
+                                    <svg class="" width="30" height="30"><use href="./sprite.svg#icon-soc-linkedin"/></svg></a>
+                                <a target=blank href="https://www.youtube.com/">
+                                    <svg class="" width="30" height="30"><use href="./sprite.svg#icon-soc-youtube"/></svg></a>
+                            </div>
+                            <div class="footer-item-txt header pay"><span>We accept</span></div>
+                            <div class="footer-img pay"><img src="./img/icons-payment.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item-txt footer-copyrights descBtn copyrights">
+                <span>© 2021 GreenShop. All Rights Reserved.</span>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </main>
+</body>
+</html>

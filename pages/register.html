@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GREENSHOP - Registration</title>
+<!--    <link rel="stylesheet" href="./css/reset.css">-->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <script>
+        window.addEventListener('load', function(){
+            const loader = document.querySelector('.loader-container');
+            const main = document.querySelector('main');
+            setTimeout(() => {
+                document.querySelector('body').classList.remove('display-none');
+                loader.style.display = 'none';
+                main.style.display = 'block';
+            }, 1500)
+        })
+    </script>
+
+    <main class="display-none">
+        <div id="resultField" class="resultField"></div>
+
+        <div class="titleParent">
+            <div class="titleParentContainer">
+                <div class="btn-close"><a href="../index.html"><svg width="18" height="18"><use href="../sprite.svg#close-cross"/></svg></a></div>
+                <span class="textTitleParent">
+                    <b>
+                    <span class="textTitle-01">
+                        Login 
+                    </span>
+                    </b>
+                    <span class="textTitle-02">
+                         |
+                    </span>
+                    <b>
+                    <span class="textTitle-03">
+                        Register
+                    </span>
+                    </b>
+                </span>
+            </div>
+            <div class="fieldDescription-01">
+                <span class="textDescription-01">
+                    Enter your email and password to register.
+                </span>
+            </div>
+            <form id="myForm" action="#">
+                <div class="fieldForm padding-T-14">
+                    <input class="textInput" type="text" name="username" placeholder="Username" pattern="^[a-zA-Zа-яА-Я ]+$" required>
+                </div>
+                <div class="fieldForm padding-T-16">
+                    <input class="textInput" type="email" name="email" placeholder="Enter your e-mail address" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                </div>
+                <div class="fieldForm padding-T-16">
+                    <input id="pass-enter" class="textInput" type="password" name="password" placeholder="Password" pattern="^[a-zA-Z0-9]+$" required>
+                    <div id="pass-check-1" class="textInput-toggle-container" onclick="passEnter()"></div>
+                </div>
+                <div class="fieldForm padding-T-16">
+                    <input id="pass-check" class="textInput imagePasswordHide" type="password" name="password" placeholder="Confirm password" pattern="^[a-zA-Z0-9]+$" required>
+                    <div id="pass-check-2" class="textInput-toggle-container" onclick="passCheck()"></div>
+                </div>
+                <div id="checkbox-parent1" class="checkBoxWrapper">
+                    <div><label class="checkBoxLabel"><input class="checkBoxContainer" aria-label="label" type="checkbox" name="age" value="confirmed" required></label></div>
+                    <div id="checkbox-child1" class="textCheckbox"><span>Confirm that you're 18+ years old</span></div>
+                </div>
+                <div id="checkbox-parent2" class="checkBoxWrapper">
+                    <div><label class="checkBoxLabel"><input class="checkBoxContainer" aria-label="label" type="checkbox" name="robot" value="proved" required></label></div>
+                    <div id="checkbox-child2" class="textCheckbox"><span>Prove that you're not a robot</span></div>
+                </div>
+
+                <div class="fieldForm padding-T-13">
+                    <input class="textButtonRegister" type="submit" name="register" value="Register">
+                </div>
+                <div id="radio-parent1" class="checkBoxWrapper">
+                    <div><label class="checkBoxLabel"><input class="checkBoxContainer" aria-label="label" type="radio" name="donor" value="agreed" required></label></div>
+                    <div id="radio-child1" class="textCheckbox"><span>Agree to sell your arm and leg</span></div>
+                </div>
+            </form>
+            <div class="fieldDescription-02">
+                    <span class="textDescription-02">
+                            <span class="textDesc-02-1">
+                                ———————
+                            </span>
+                            <span class="textDesc-02-2">
+                                Or register with
+                            </span>
+                            <span class="textDesc-02-3">
+                                ———————
+                            </span>
+                    </span>
+            </div>
+            <div class="buttonContainer marginT-30">
+                <button class="reg-button" onclick="location.href='http://www.google.com'" type="button">
+                        <span class="textButtonHref">
+                            <img src="../img/google.png" alt="" class="padding-9">Continue with Google
+                        </span>
+                </button>
+            </div>
+            <div class="buttonContainer">
+                <button class="reg-button" onclick="location.href='http://www.facebook.com'" type="button">
+                        <span class="textButtonHref">
+                            <img src="../img/facebook.png" alt="" class="padding-9">Continue with Facebook
+                        </span>
+                </button>
+            </div>
+            <div class="footerLine"><footer></footer></div>
+        </div>
+
+
+        <script>
+            function passEnter() {
+                let x = document.getElementById("pass-enter");
+                let eye = document.getElementById('pass-check-1')
+                if (x.type === "password") {
+                    x.type = "text";
+                    eye.style.backgroundImage = "url('../img/pass-show.png')";
+                } else {
+                    x.type = "password";
+                    eye.style.backgroundImage = "url('../img/pass-hide.png')";
+                }
+            }
+            function passCheck() {
+                let x = document.getElementById("pass-check");
+                let eye = document.getElementById('pass-check-2')
+                if (x.type === "password") {
+                    x.type = "text";
+                    eye.style.backgroundImage = "url('../img/pass-show.png')";
+                } else {
+                    x.type = "password";
+                    eye.style.backgroundImage = "url('../img/pass-hide.png')";
+                }
+            }
+        </script>
+
+        <script>
+            document.addEventListener("submit", function (event) {
+                if (document.getElementById('pass-enter').value != document.getElementById('pass-check').value){
+                    alert("Passwords DON'T MATCH!!! Fill the form again");
+                    return false;
+                }
+                event.preventDefault();
+                console.log(event, "event");
+                // Check if the submitted form is your form with the ID 'myForm'
+                if (event.target.id === "myForm") {
+                    // Prevent the default form submission
+                    event.preventDefault();
+
+                    // Get the form element
+                    const form = event.target;
+
+                    // Get all form fields
+                    const formData = new FormData(form);
+
+                    let result = "";
+
+                        result +=  "\n" + "\n" + "\n"; // visuall offset top
+                    // Iterate through form data and build the result string
+                    formData.forEach(function (value, key) {
+                        result += key + ": " + value + "\n";
+                    });
+                        result +=  "\n" + "\n" + "\n"; // visuall offset bottom
+                    // Display the result in the resultDiv
+                    document.getElementById("resultField").innerText = result;
+                    // If you want to do something else with the result, you can do it here
+
+                    return false;
+                }
+            });
+        </script>
+    </main>
+</body>
+</html>
