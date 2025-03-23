@@ -71,13 +71,13 @@ div.standard-menu{
     transform: rotate(90deg);
 }
 #menu__toggle:checked ~ .menu__box {
-    left: 0 !important;
+    right: 0 !important;
 }
 .menu__btn {
     top: 66px;
     transform: translateX(50%);
-    left: 100%;
-    right: 0;
+    right: 100%;
+    left: 0;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -108,9 +108,9 @@ div.standard-menu{
     z-index: 2;
     display: block;
     position: fixed;
-    top: 0;
-    left: -100%;
-    width: 200px;
+    top: 102px;
+    right: -100%;
+    width: 50%;
     height: 100%;
     margin: 0;
     padding: 80px 0;
@@ -243,35 +243,46 @@ header{
     justify-content: space-between;
     margin: auto;
     width: 100%;
+    /*max-width: 1200px;*/
     min-height: 450px;
     background-color: #F5F5F580;
     @media screen and (max-width: 1024px){
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
     }
 }
 .banner-container{
-    min-height: 450px;
+    width: 100%;
     position: relative;
     border: none;
     margin-top: -5px;
     @media screen and (max-width: 1024px){
-        width: fit-content;
-        margin-left: 11.25px;
+        /*max-height: 100%;*/
+        padding-left: 11.25px;
+        position: unset;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .text{
             padding-left: 0;
         }
         h1 h2 h3{
-            width: fit-content;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
         }
         .plantImgLarge{
-            transform: translateX(50%) translateY(-15%);
-            right: calc(-46px - 50%);
+            position: relative;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            top: -35px;
         }
         .plantImgSmall{
-            transform: translateX(50%) translateY(calc(-15% / 0.265));
-            right: calc(0.26*(-178px + 46px - 50%));
+            display: none;
+            /*position: relative;*/
+            /*max-width: 20%;*/
+            /*max-height: 20%;*/
         }
         .button-shopnow{
             margin-left: 0;
@@ -416,7 +427,7 @@ ul {
     }
     > li:hover > ul {
         display: block;
-        width: 188px;
+        max-width: 188px;
         padding-top: 57px;
         font-weight: 400;
         left: calc(-100% - 18px);
@@ -522,6 +533,7 @@ h3{
     font-family: 'Cera Pro', sans-serif;
     margin-top: 27px;
     margin-left: 40px;
+    margin-bottom: 20px;
     cursor: pointer;
     &:hover{
         transition-duration: 0.9s;
@@ -559,6 +571,9 @@ h3{
     }
     &:not(:hover){
         transition:  background-color, border, scale, color 0.5s;
+    }
+    @media screen and (max-width: 560px){
+        margin-bottom: 20px;
     }
 }
 .button-readmore-text{
@@ -637,7 +652,7 @@ div.float-block-R{
     }
 }
 .categories-menu-bg-list{
-    min-width: 300px;
+    max-width: 300px;
 }
 .categories-header{
     font-weight: 700;
@@ -809,7 +824,7 @@ div.float-block-R{
     font-family: 'Cera Pro', sans-serif;
 }
 .plant-image-container{
-    width: 258px;
+    max-width: 258px;
     height: 300px;
     background-color: #FBFBFB;
     display: flex;
@@ -819,7 +834,7 @@ div.float-block-R{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 258px;
+    max-width: 258px;
     margin-bottom: -6px;
 }
 .plant-text-style{
@@ -859,10 +874,18 @@ div.float-block-R{
 .info-item-container{
     position: relative;
     padding-top: 52px;
-    min-width: 586px;
+    width: 586px;
     min-height: 302px;
     background-color: #FBFBFB;
     cursor: pointer;
+    @media screen and (max-width: 1199px){
+        padding-top: 0;
+        flex-direction: column;
+        max-width: 586px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
 }
 .info-white-header{
     width: 100%;
@@ -870,15 +893,29 @@ div.float-block-R{
     background-color: #FFFFFF;
     position: absolute;
     top: 0;
+    @media screen and (max-width: 580px){
+        position: relative
+    }
 }
 .info-image-container{
     position: absolute;
     bottom: 5px;
     left: 0;
     display: flex;
+    @media screen and (max-width: 580px){
+        /*margin-top: -20px;*/
+        position: relative;
+        /*margin-left: 20px;*/
+        /*margin-right: 20px;*/
+        margin: auto;
+    }
 }
 img.info-image-container{
-    height: 292px;
+    min-height: 292px;
+    @media screen and (max-width: 580px){
+        margin-top: -40px;
+        height: 70%;
+    }
 }
 .info-text-wrapper{
     display: flex;
@@ -892,6 +929,15 @@ img.info-image-container{
     bottom: 0;
     right: 30px;
     padding-top: 52px;
+    @media screen and (max-width: 580px){
+        position: relative;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        padding-top: 0;
+        right: 0;
+        left: 0;
+    }
 }
 .info-text-container{
     margin-top: 6px;
@@ -1128,11 +1174,10 @@ div.categories-footer-page:hover{
     color: #727272;
 }
 .newsletter-convo-container{
-    width: 354px;
-    height: 202px;
+    max-width: 354px;
+    min-height: 202px;
 }
 .newsletter-convo-wrapper{
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1148,6 +1193,9 @@ div.categories-footer-page:hover{
     font-size: 18px;
     line-height: 18px;
     color: #3D3D3D;
+    @media screen and (max-width: 500px){
+        text-align: center;
+    }
 }
 .newsletter-convo-txt.desc{
     font-weight: 400;
@@ -1157,14 +1205,15 @@ div.categories-footer-page:hover{
 }
 .newsletter-convo-form{
     margin-top: 6px;
-    width: 354px;
-    height: 40px;
+    max-width: 354px;
+    min-height: 40px;
     display: flex;
     font-family: 'Cera Pro', sans-serif;
     filter: drop-shadow(0 0 20px #0000000F);
     position: relative;
     input{
-        width: 354px;
+        width: 100%;
+        max-width: 100%;
         height: 100%;
         padding: 11px 96px 11px 12px;
         font-weight: 400;
@@ -1182,35 +1231,50 @@ div.categories-footer-page:hover{
             background-color : white;
         }
     }
-
-    button{
-        position: absolute;
-        right: 0;
-        width: 85px;
-        height: 100%;
-        border: none;
-        border-radius: 0 6px 6px 0;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 16px;
-        color: #FFFFFF;
-        background-color: #46A358;
-        border-top: 3px solid transparent;
-        border-bottom: 3px solid transparent;
-        cursor: pointer;
-        &:hover{
-            transition-duration: 1s;
-            transition-delay: 0.3s;
-            width: 354px;
-            border-radius: 6px;
-            background-color: white;
-            color: #46A358;
-            border-top: 3px solid #46A35880;
-            border-bottom: 3px solid #46A35880;
+    @media screen and (max-width: 500px){
+        flex-direction: column;
+        margin-top: 20px;
+        border-radius: 6px 6px 0 0;
+    }
+}
+.newsletter-convo-form-button{
+    position: absolute;
+    right: 0;
+    width: 85px;
+    height: 100%;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 16px;
+    color: #FFFFFF;
+    background-color: #46A358;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    @media screen and (max-width: 500px){
+        position: relative;
+        margin: auto;
+        border-radius: 0 0 6px 6px;
+        width: 100%;
+        min-height: 35px;
+        margin-bottom: 10px;
+    }
+    &:hover{
+        transition-duration: 1s;
+        transition-delay: 0.3s;
+        width: 100%;
+        border-radius: 6px;
+        background-color: white;
+        color: #46A358;
+        border-top: 3px solid #46A35880;
+        border-bottom: 3px solid #46A35880;
+        @media screen and (max-width: 500px) {
+            border-radius: 0 0 6px 6px;
         }
-        &:not(:hover){
-            transition: all 0.5s;
-        }
+    }
+    &:not(:hover){
+        transition: all 0.5s;
     }
 }
 
@@ -1416,7 +1480,7 @@ div.categories-footer-page:hover{
 /*---MAIN---*/
 input{
     display: block;
-    width: 300px;
+    max-width: 300px;
     border:1px solid #EAEAEA;
     border-radius: 5px;
 }
